@@ -1,29 +1,47 @@
 {
-	"extends": "@tsconfig/svelte/tsconfig.json",
 	"compilerOptions": {
-		"target": "ESNext",
-		"useDefineForClassFields": true,
-		"module": "ESNext",
-		"resolveJsonModule": true,
-		"baseUrl": ".",
-		"allowJs": true,
-		"checkJs": true,
-		"isolatedModules": true,
-		"strict": true,
+		//base
+		"target": "es2017",
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"outDir": "./dist",
+		"baseUrl": "./",
+
+		// adds
+		"declaration": true,
+		"removeComments": true,
+		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
-		"paths": {
-			"@": ["src"],
-			"@/*": ["src/*"],
-			"$types/*": ["src/typescript/types/*"],
-			"$tsstore/*": ["src/typescript/store/*"],
-			"$styles/*": ["src/styles/*"],
-			"$lib/*": ["./src/svelte/*"],
-			"$ts/*": ["src/typescript/*"],
-			"$services/*": ["src/typescript/services/*"],
-			"$tests/*": ["src/typescript/tests/*"],
-			"$app/*": ["src/typescript/app/*"]
-		}
-	},
-	"include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.js", "src/**/*.svelte"],
-	"references": [{ "path": "./tsconfig.node.json" }]
+		"allowSyntheticDefaultImports": true,
+		"sourceMap": true,
+		"incremental": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
+		"esModuleInterop": true,
+		"checkJs": false,
+		"resolveJsonModule": true,
+
+		// Lint
+		"noPropertyAccessFromIndexSignature": true,
+		"noUncheckedIndexedAccess": true,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": false,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"allowUnreachableCode": false,
+		"allowUnusedLabels": false,
+
+		// Acess
+		"strictNullChecks": false,
+		"strict": true,
+		"noImplicitAny": false,
+		"strictBindCallApply": false,
+		"alwaysStrict": true,
+		"strictPropertyInitialization": true,
+		"strictFunctionTypes": true,
+		"noImplicitThis": true,
+		"suppressExcessPropertyErrors": false,
+		"suppressImplicitAnyIndexErrors": false,
+		"noStrictGenericChecks": false
+	}
 }
